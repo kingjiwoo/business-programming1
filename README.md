@@ -8,12 +8,30 @@
 
 ### 사용 데이터 
 - 데이콘 영화 관객 수 예측 경진 대회: https://dacon.io/competitions/open/235536/data
+- 훈련 데이터와 검증 데이터가 존재하나, 검증 데이터를 label이 없어 훈련 데이터만 이용
 
 ### EDA
+#### 전처리
+- 장르
+  - 장르는 인기있는 순서대로 순위를 매김
+- 배급사
+  - 배급사는 정규표현식으로 잡다한 불용어를 제거하고, 최대한 모기업을 기준으로 통일
+
+#### 시각화
+- correlation table
+  -![correlation table](https://user-images.githubusercontent.com/95577538/186349677-6cefbf14-c913-47d9-88b7-25927d71e6cb.png)
+
+- target value distribution
+  - ![관객수](https://user-images.githubusercontent.com/95577538/186349742-76ffaefc-55cf-4c71-a981-a3e9f40fdc37.png)
 
 ### 주요 가설
+- 영화 제작 과정에서 스탭 수의 증가가 관객 동원 수 증가와 양의 상관 관계를 가질 것인가?
+- 그렇다면 어떤 독립 변수들이 관객 동원에 긍정적인 영향을 끼치는가?
 
 ### 모델 선택
+#### 모델 => 다중 선형 회귀 모델 
+- 선정이유 : 정확한 타겟 값의 예측 보다, 이론의 설명력을 담보로 하는 것이 비즈니스 환경에서 더 설득력이 있을 것이라고 판단.
+- 
 
 ### 통계적 정당성 검증
 
